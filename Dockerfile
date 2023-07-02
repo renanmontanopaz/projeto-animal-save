@@ -1,5 +1,5 @@
 FROM maven:3.8.5-openjdk-18 AS build
-COPY . .
+COPY src .
 RUN mvn clean package -DskipTests
 
 FROM openjdk:18-ea-8-jdk-slim
